@@ -1,5 +1,6 @@
 const http = require('http')
 
+// this is a callback function
 const server = http.createServer((req, res) => {
   // console.log(req)
   if (req.url === '/') {
