@@ -4,6 +4,11 @@ const getAllTasks = async (req, res) => {
   try {
     const tasks = await Task.find({})
     res.status(200).json({ tasks })
+    // res.status(200).json({ tasks, amount: tasks.length })
+    // res.status(200).json({ status: 'success', data: { task } })
+    // res
+    //   .status(200)
+    //   .json({ success: true, data: { tasks, nbHits: tasks.length } })
   } catch (error) {
     res.status(500).json({ msg: error })
   }
@@ -48,6 +53,7 @@ const updateTask = async (req, res) => {
     res.status(500).json({ msg: error })
   }
 }
+// if it's PUT, it will be replacing item, if field isn't given, it will be removed
 
 const deleteTask = async (req, res) => {
   try {
