@@ -17,7 +17,7 @@ app.use(notFound)
 app.use(errorHandlerMiddleware)
 // there's a built in default error handler from express js
 
-const port = 3000
+const port = process.env.PORT || 3000
 
 const start = async () => {
   try {
